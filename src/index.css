@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f6f2;
+  --color-ink: #282a2c;
+  --color-night: #191a1b;
+  --color-line: #d8d8d3;
+  --color-sand: #e9e5dc;
+  --color-copper: #a96348;
+  --font-sans: "DM Sans", sans-serif;
+  --font-editorial: "Instrument Serif", Georgia, serif;
+}
+
+:root { font-family: "DM Sans", sans-serif; color: #282a2c; background: #f7f6f2; font-synthesis: none; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+::selection { color: #f7f6f2; background: #a96348; }
+.nav-link { position: relative; font-size: 11px; font-weight: 500; color: rgb(40 42 44 / .65); transition: color .2s; }
+.nav-link:hover { color: #282a2c; }
+.nav-link::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 1px; content: ""; background: #a96348; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.nav-link:hover::after { transform: scaleX(1); }
+.thread-line { background-image: linear-gradient(to bottom, transparent 0%, #a96348 18%, #a96348 82%, transparent 100%); }
+.paper-grid { background-image: linear-gradient(rgb(40 42 44 / .06) 1px, transparent 1px), linear-gradient(90deg, rgb(40 42 44 / .06) 1px, transparent 1px); background-size: 32px 32px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #a96348; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
